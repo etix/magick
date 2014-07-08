@@ -17,7 +17,7 @@
 
 #define INLINE static inline
 
-#if defined(GIFLIB_MAJOR) && GIFLIB_MAJOR < 5
+#if !defined(GIFLIB_MAJOR) || GIFLIB_MAJOR < 5
     #define EGifOpen(x, y, z) EGifOpen(x, y)
     #define EGifCloseFile(x, y) EGifCloseFile(x)
     #define GifMakeMapObject MakeMapObject
